@@ -16,6 +16,7 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
+  DOCKERHUB_IMAGE_NAME: zack2025/chatgpt-on-wechat
 
 jobs:
   build-and-push-image:
@@ -49,6 +50,7 @@ jobs:
           images: |
             ${{ env.IMAGE_NAME }}
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+            ${{ env.DOCKERHUB_IMAGE_NAME }}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v3
