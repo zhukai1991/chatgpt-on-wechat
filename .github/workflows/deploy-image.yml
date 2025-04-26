@@ -57,7 +57,7 @@ jobs:
           context: .
           push: true
           file: ./docker/Dockerfile.latest
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: 'v1.0.0'
           labels: ${{ steps.meta.outputs.labels }}
 
       - uses: actions/delete-package-versions@v4
